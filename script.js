@@ -168,54 +168,54 @@ const quizQuestions = [
 // NEW: Game recommendations with image placeholders
 const gameRecommendations = {
     "کریتوس": [
-        { title: "The Witcher 3: Wild Hunt", image: "https://gamerenter.ir/product/the-witcher-3-wild-hunt-xbox-dig" },
-        { title: "Red Dead Redemption 2", image: "https://gamerenter.ir/product/red-dead-redemption-2-xbox-dig" },
-        { title: "Far Cry 5", image: "https://gamerenter.ir/product/far-cry-5-xbox-dig" }
+        { title: "The Witcher 3: Wild Hunt", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9712/70d3517f1b7ca12f3233bbe982ed3556.webp?w=800&h=800" },
+        { title: "Red Dead Redemption 2", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9710/8e52ee4f0c5a4f8d4e68f2456a373137.webp?w=800&h=800" },
+        { title: "Far Cry 5", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9714/24d2a4ef00d865610bf99ce1a9bcd6ce.webp?w=800&h=800" }
     ],
     "اساسین": [
-        { title: "Star Wars Outlaws", image: "https://gamerenter.ir/product/star-wars-outlaws-xbox-dig" },
-        { title: "Borderlands 4", image: "https://gamerenter.ir/product/borderlands-4-xbox-dig" },
-        { title: "Far Cry 5", image: "https://gamerenter.ir/product/far-cry-5-xbox-dig" }
+        { title: "Star Wars Outlaws", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9370/c9c9df70b779128cd21fd021d5982b67.webp?w=800&h=800" },
+        { title: "Borderlands 4", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9492/c69b76b27c6a941e6c5954bf85dd640e.webp?w=800&h=800" },
+        { title: "Far Cry 5", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9714/24d2a4ef00d865610bf99ce1a9bcd6ce.webp?w=800&h=800" }
     ],
     "لارا کرافت": [
-        { title: "Hogwarts Legacy", image: "https://gamerenter.ir/product/hogwarts-legacy-xbox-dig" },
-        { title: "Star Wars Outlaws", image: "https://gamerenter.ir/product/star-wars-outlaws-xbox-dig" },
-        { title: "Lies of P: Overture", image: "https://gamerenter.ir/product/lies-of-p-xbox-dig" }
+        { title: "Hogwarts Legacy", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9738/ad9b67b52bb7701c3f5c32d0aeeb135e.webp?w=800&h=800" },
+        { title: "Star Wars Outlaws", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9370/c9c9df70b779128cd21fd021d5982b67.webp?w=800&h=800" },
+        { title: "Lies of P: Overture", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9387/2050fbdbfb7b549fcafb39d5da074029.webp?w=800&h=800" }
     ],
     "مستر چیف": [
-        { title: "Borderlands 4", image: "https://gamerenter.ir/product/borderlands-4-xbox-dig" },
-        { title: "WWE 2K25", image: "https://gamerenter.ir/product/nba-2k25-xbox-dig" },
-        { title: "Far Cry 5", image: "https://gamerenter.ir/product/far-cry-5-xbox-dig" }
+        { title: "Borderlands 4", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9492/c69b76b27c6a941e6c5954bf85dd640e.webp?w=800&h=800" },
+        { title: "WWE 2K25", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/8523/2be39fa42afa5215987e6c0713623de4.webp?w=800&h=800" },
+        { title: "Far Cry 5", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9714/24d2a4ef00d865610bf99ce1a9bcd6ce.webp?w=800&h=800" }
     ],
     "گرالت": [
-        { title: "The Witcher 3: Wild Hunt", image: "https://gamerenter.ir/product/the-witcher-3-wild-hunt-xbox-dig" },
-        { title: "Red Dead Redemption 2", image: "https://gamerenter.ir/product/red-dead-redemption-2-xbox-dig" },
-        { title: "Hogwarts Legacy", image: "https://gamerenter.ir/product/hogwarts-legacy-xbox-dig" }
+        { title: "The Witcher 3: Wild Hunt", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9712/70d3517f1b7ca12f3233bbe982ed3556.webp?w=800&h=800" },
+        { title: "Red Dead Redemption 2", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9710/8e52ee4f0c5a4f8d4e68f2456a373137.webp?w=800&h=800" },
+        { title: "Hogwarts Legacy", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9738/ad9b67b52bb7701c3f5c32d0aeeb135e.webp?w=800&h=800" }
     ],
     "آرتور مورگان": [
-        { title: "Red Dead Redemption 2", image: "https://gamerenter.ir/product/red-dead-redemption-2-xbox-dig" },
-        { title: "The Witcher 3: Wild Hunt", image: "https://gamerenter.ir/product/the-witcher-3-wild-hunt-xbox-dig" },
-        { title: "Star Wars Outlaws", image: "https://gamerenter.ir/product/star-wars-outlaws-xbox-dig" }
+        { title: "Red Dead Redemption 2", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9710/8e52ee4f0c5a4f8d4e68f2456a373137.webp?w=800&h=800" },
+        { title: "The Witcher 3: Wild Hunt", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9712/70d3517f1b7ca12f3233bbe982ed3556.webp?w=800&h=800" },
+        { title: "Star Wars Outlaws", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9370/c9c9df70b779128cd21fd021d5982b67.webp?w=800&h=800" }
     ],
     "زلدا": [
-        { title: "Hogwarts Legacy", image: "https://gamerenter.ir/product/hogwarts-legacy-xbox-dig" },
-        { title: "Little Nightmares III", image: "https://gamerenter.ir/product/little-nightmares-iii-xbox-dig" },
-        { title: "Lies of P: Overture", image: "https://gamerenter.ir/product/lies-of-p-xbox-dig" }
+        { title: "Hogwarts Legacy", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9738/ad9b67b52bb7701c3f5c32d0aeeb135e.webp?w=800&h=800" },
+        { title: "Little Nightmares III", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9491/d3ac0237d4f979d6b17969adfc1b0412.webp?w=800&h=800" },
+        { title: "Lies of P: Overture", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9387/2050fbdbfb7b549fcafb39d5da074029.webp?w=800&h=800" }
     ],
     "جوئل": [
-        { title: "Lies of P: Overture", image: "https://gamerenter.ir/product/lies-of-p-xbox-dig" },
-        { title: "Far Cry 5", image: "https://gamerenter.ir/product/far-cry-5-xbox-dig" },
-        { title: "Red Dead Redemption 2", image: "https://gamerenter.ir/product/red-dead-redemption-2-xbox-dig" }
+        { title: "Lies of P: Overture", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9387/2050fbdbfb7b549fcafb39d5da074029.webp?w=800&h=800" },
+        { title: "Far Cry 5", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9714/24d2a4ef00d865610bf99ce1a9bcd6ce.webp?w=800&h=800" },
+        { title: "Red Dead Redemption 2", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9710/8e52ee4f0c5a4f8d4e68f2456a373137.webp?w=800&h=800" }
     ],
     "ماریو": [
-        { title: "EA SPORTS FC 25", image: "https://gamerenter.ir/product/ea-sports-fc-25-xbox-dig" },
-        { title: "NBA 2K25", image: "https://gamerenter.ir/product/nba-2k25-xbox-dig" },
-        { title: "Little Nightmares III", image: "https://gamerenter.ir/product/little-nightmares-iii-xbox-dig" }
+        { title: "EA SPORTS FC 25", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9163/435e51cc9780af7885d2699dd183baa4.webp?w=800&h=800" },
+        { title: "NBA 2K25", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9059/4898118b108f648bf7972546bf251e69.webp?w=800&h=800" },
+        { title: "Little Nightmares III", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9491/d3ac0237d4f979d6b17969adfc1b0412.webp?w=800&h=800" }
     ],
     "دختر سایبرپانک": [
-        { title: "Star Wars Outlaws", image: "https://gamerenter.ir/product/star-wars-outlaws-xbox-dig" },
-        { title: "GTA V", image: "https://gamerenter.ir/product/grand-theft-auto-v-xbox-dig" },
-        { title: "Borderlands 4", image: "https://gamerenter.ir/product/borderlands-4-xbox-dig" }
+        { title: "Star Wars Outlaws", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9370/c9c9df70b779128cd21fd021d5982b67.webp?w=800&h=800" },
+        { title: "GTA V", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9711/159420f8c4e69a8f87e30a12f2a33e73.webp?w=800&h=800" },
+        { title: "Borderlands 4", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9492/c69b76b27c6a941e6c5954bf85dd640e.webp?w=800&h=800" }
     ]
 };
 
@@ -449,4 +449,5 @@ submitButton.addEventListener('click', () => {
 shareButton.addEventListener('click', shareResult);
 
 document.addEventListener('DOMContentLoaded', initializeQuiz);
+
 
