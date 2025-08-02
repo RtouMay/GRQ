@@ -1,68 +1,77 @@
-// تعریف ۱۰ شخصیت گیمینگ با نام، مسیر تصویر، تحلیل کوتاه، ویژگی‌های خوب و بد
+// تعریف ۱۰ شخصیت گیمینگ با نام، مسیر تصویر، تحلیل کوتاه، ویژگی‌های خوب، بد، کپی‌رایت و آمار
 const gameCharacters = {
     "کریتوس": {
         image: "aks/1.png", 
         analysis: "شما شبیه کریتوس هستید: جنگجویی بی‌باک و مصمم که چالش‌ها را با قدرت و اراده بالا پشت سر می‌گذارد. در نبردها رهبری طبیعی دارید و هرگز از روبرو شدن با دشمنان سرسخت نمی‌ترسید. قدرت و استقامت از ویژگی‌های بارز شماست و همیشه به دنبال راهی برای رسیدن به اهدافتان هستید، حتی اگر مسیر پر از موانع باشد.",
         goodTraits: ["قدرت و استقامت بالا", "اراده و عزم راسخ", "جنگجوی بی‌باک", "رهبری طبیعی در نبردها", "عدم ترس از چالش‌ها"],
-        badTraits: ["خشم کنترل نشده", "بی‌رحمی در برخورد با دشمنان", "میل به انتقام", "تنهایی و انزوا", "گذشته تاریک و سنگین"]
+        badTraits: ["خشم کنترل نشده", "بی‌رحمی در برخورد با دشمنان", "میل به انتقام", "تنهایی و انزوا", "گذشته تاریک و سنگین"],
+        stats: { power: 90, agility: 40, intelligence: 50, loyalty: 60, adventure: 70 }
     },
     "اساسین": {
         image: "aks/2.png", 
         analysis: "شما روحیه‌ی یک اساسین را دارید: چابک، مخفی‌کار و استراتژیست. ترجیح می‌دهید دشمنان را از سایه‌ها غافلگیر کنید و به جای نبردهای مستقیم، از هوش و تاکتیک استفاده کنید. آزادی عمل و توانایی حرکت در محیط‌های پیچیده برایتان بسیار مهم است. شما همواره به دنبال عدالت هستید و برای آن مبارزه می‌کنید.",
         goodTraits: ["چابکی و مهارت بالا", "هوش و استراتژی", "مخفی‌کاری عالی", "تعهد به عدالت", "آزادی‌خواه"],
-        badTraits: ["اعتماد کم به دیگران", "تمایل به تنها کار کردن", "رفتار مرموز", "پایبندی شدید به اصول (گاهی افراطی)", "سخت‌گیر در قضاوت"]
+        badTraits: ["اعتماد کم به دیگران", "تمایل به تنها کار کردن", "رفتار مرموز", "پایبندی شدید به اصول (گاهی افراطی)", "سخت‌گیر در قضاوت"],
+        stats: { power: 60, agility: 90, intelligence: 80, loyalty: 70, adventure: 80 }
     },
     "لارا کرافت": {
         image: "aks/3.png", 
         analysis: "شما مانند لارا کرافت، یک کاوشگر واقعی هستید. کنجکاوی، شجاعت و توانایی حل پازل‌ها از ویژگی‌های بارز شماست. عاشق ماجراجویی، کشف مکان‌های ناشناخته و رمزگشایی از اسرار باستانی هستید. هیچ مانعی شما را از دستیابی به اهدافتان باز نمی‌دارد و همیشه آماده رویارویی با ناشناخته‌ها هستید.",
         goodTraits: ["کنجکاوی بی‌پایان", "شجاعت و جسارت", "توانایی حل پازل", "عاشق ماجراجویی", "مقاومت در برابر سختی‌ها"],
-        badTraits: ["عجول در کشف", "بی‌احتیاطی در موقعیت‌های خطرناک", "وابستگی به هیجان", "گاهی تک‌رو", "ممکن است خود را به خطر بیندازد"]
+        badTraits: ["عجول در کشف", "بی‌احتیاطی در موقعیت‌های خطرناک", "وابستگی به هیجان", "گاهی تک‌رو", "ممکن است خود را به خطر بیندازد"],
+        stats: { power: 70, agility: 85, intelligence: 85, loyalty: 50, adventure: 95 }
     },
     "مستر چیف": {
         image: "aks/4.png", 
         analysis: "شما شبیه مستر چیف هستید: یک سرباز حرفه‌ای، وفادار و خونسرد. در موقعیت‌های پرفشار آرامش خود را حفظ می‌کنید و توانایی بالایی در کار تیمی و اجرای دقیق ماموریت‌ها دارید. محافظت از هم‌تیمی‌ها و انجام وظیفه، اولویت اصلی شماست. شما در نبردها یک نیروی غیرقابل توقف هستید که به خوبی استراتژی را با اکشن ترکیب می‌کند.",
         goodTraits: ["خونسردی تحت فشار", "وفاداری بالا", "مهارت نظامی و تاکتیک‌پذیری", "توانایی کار تیمی", "حس وظیفه‌شناسی قوی"],
-        badTraits: ["کم‌حرف و درون‌گرا", "ممکن است احساساتش را بروز ندهد", "تمرکز بیش از حد بر ماموریت", "ممکن است از خود غافل شود", "وابستگی به پروتکل و دستورالعمل"]
+        badTraits: ["کم‌حرف و درون‌گرا", "ممکن است احساساتش را بروز ندهد", "تمرکز بیش از حد بر ماموریت", "ممکن است از خود غافل شود", "وابستگی به پروتکل و دستورالعمل"],
+        stats: { power: 95, agility: 70, intelligence: 70, loyalty: 90, adventure: 80 }
     },
     "گرالت": {
         image: "aks/5.png", 
         analysis: "شما روحیه‌ی گرالت را دارید: واقع‌بین، عمل‌گرا و گاهی بدبین، اما در اعماق وجودتان عادل و وفادار. شما برای رسیدن به حقیقت و انجام درست کارها، حتی در شرایط سخت، تلاش می‌کنید. به مهارت‌های فردی خود اعتماد دارید و ترجیح می‌دهید مشکلات را با منطق و تجربه حل کنید تا احساسات. شما مستقل و خودکفا هستید.",
         goodTraits: ["واقع‌بینی و منطق", "عمل‌گرایی و کارایی", "عدالت‌جو و وفادار", "مستقل و خودکفا", "مهارت در حل مشکلات با تجربه"],
-        badTraits: ["بدبینی و شکاکیت", "انزوا و دوری از اجتماع", "کم‌حرفی", "گاهی اوقات بی‌تفاوت به نظر می‌رسد", "ممکن است احساسات را کنار بگذارد"]
+        badTraits: ["بدبینی و شکاکیت", "انزوا و دوری از اجتماع", "کم‌حرفی", "گاهی اوقات بی‌تفاوت به نظر می‌رسد", "ممکن است احساسات را کنار بگذارد"],
+        stats: { power: 80, agility: 65, intelligence: 90, loyalty: 85, adventure: 60 }
     },
     "آرتور مورگان": {
         image: "aks/6.png", 
         analysis: "شما شبیه آرتور مورگان هستید: آزادی‌خواه، وفادار به دوستان و دارای یک وجدان قوی. شما به ارزش‌های خود پایبند هستید، حتی در دنیایی که این ارزش‌ها در حال از بین رفتن هستند. به دنبال ماجراجویی هستید اما اهمیت روابط انسانی و وفاداری به دوستانتان را درک می‌کنید. گاهی اوقات میان انتخاب راه درست و راه آسان درگیر می‌شوید.",
         goodTraits: ["وفاداری به دوستان", "وجدان قوی", "آزادی‌خواه", "درک اهمیت روابط انسانی", "شجاعت در مواجهه با چالش‌ها"],
-        badTraits: ["ممکن است درگیر گذشته شود", "تضاد درونی بین خیر و شر", "رفتارهای قانون‌شکن", "گاهی اوقات بدبین", "ممکن است به سمت انزوا کشیده شود"]
+        badTraits: ["ممکن است درگیر گذشته شود", "تضاد درونی بین خیر و شر", "رفتارهای قانون‌شکن", "گاهی اوقات بدبین", "ممکن است به سمت انزوا کشیده شود"],
+        stats: { power: 85, agility: 75, intelligence: 60, loyalty: 95, adventure: 75 }
     },
     "زلدا": {
         image: "aks/7.png", 
         analysis: "شما مانند زلدا، باهوش، دلسوز و دارای توانایی‌های رهبری بالقوه هستید. شما به دنبال دانش و خرد هستید و از قدرت‌های خود برای محافظت از دیگران و ایجاد صلح استفاده می‌کنید. شما ممکن است در ابتدا کمی آرام و متفکر به نظر برسید، اما قدرت درونی و اراده شما برای مقابله با تاریکی بی‌نظیر است.",
         goodTraits: ["هوش و خرد", "دلسوزی و همدلی", "توانایی رهبری", "تلاش برای صلح", "اراده قوی در برابر تاریکی"],
-        badTraits: ["ممکن است بیش از حد متفکر باشد", "گاهی اوقات مردد", "بروز ندادن کامل احساسات", "ممکن است خود را فدا کند", "فشار مسئولیت‌پذیری زیاد"]
+        badTraits: ["ممکن است بیش از حد متفکر باشد", "گاهی اوقات مردد", "بروز ندادن کامل احساسات", "ممکن است خود را فدا کند", "فشار مسئولیت‌پذیری زیاد"],
+        stats: { power: 60, agility: 50, intelligence: 95, loyalty: 80, adventure: 70 }
     },
     "جوئل": {
         image: "aks/8.png", 
         analysis: "شما شبیه جوئل هستید: محافظه‌کار، عمل‌گرا و بسیار وفادار به کسانی که دوستشان دارید. شما برای بقا و محافظت از عزیزانتان هر کاری می‌کنید و در دنیایی سخت، قوی و محکم باقی می‌مانید. شاید در ظاهر خشن و واقع‌بین به نظر برسید، اما در عمق وجودتان قلبی مهربان و فداکار دارید و به کسانی که برایتان مهم هستند، اهمیت می‌دهید.",
         goodTraits: ["وفاداری بی‌حد و حصر", "محافظه‌کار و عمل‌گرا", "قوی و محکم در برابر سختی‌ها", "فداکار و مهربان (دروناً)", "تعهد به بقا و محافظت"],
-        badTraits: ["خشن و بی‌رحم در ظاهر", "عدم اعتماد به غریبه‌ها", "سخت‌گیری در ارتباطات", "تصمیمات بر اساس احساسات (گاهی)", "انزواطلبی در شرایط خاص"]
+        badTraits: ["خشن و بی‌رحم در ظاهر", "عدم اعتماد به غریبه‌ها", "سخت‌گیری در ارتباطات", "تصمیمات بر اساس احساسات (گاهی)", "انزواطلبی در شرایط خاص"],
+        stats: { power: 80, agility: 60, intelligence: 70, loyalty: 95, adventure: 65 }
     },
     "ماریو": {
         image: "aks/9.png", 
         analysis: "شما روحیه‌ی ماریو را دارید: شاد، پرانرژی و همیشه آماده کمک به دیگران. شما با چالش‌ها با خوش‌بینی و علاقه روبرو می‌شوید و هرگز تسلیم نمی‌شوید. توانایی‌های مختلفی دارید و می‌توانید خود را با موقعیت‌های گوناگون وفق دهید و همیشه به دنبال راهی برای شاد کردن خود و اطرافیانتان هستید. شما نماد امید و پشتکار هستید.",
         goodTraits: ["شادی و خوش‌بینی", "انرژی و پشتکار بالا", "همیشه آماده کمک", "توانایی وفق دادن خود با موقعیت‌ها", "نماد امید"],
-        badTraits: ["سادگی بیش از حد", "گاهی اوقات بی‌دقت", "ممکن است در موقعیت‌های جدی، بیش از حد شوخ باشد", "فقدان جدیت در برخی مواقع", "ممکن است درگیر مشکلات دیگران شود"]
+        badTraits: ["سادگی بیش از حد", "گاهی اوقات بی‌دقت", "ممکن است در موقعیت‌های جدی، بیش از حد شوخ باشد", "فقدان جدیت در برخی مواقع", "ممکن است درگیر مشکلات دیگران شود"],
+        stats: { power: 50, agility: 75, intelligence: 60, loyalty: 85, adventure: 90 }
     },
     "دختر سایبرپانک": { // شخصیتی شبیه به V یا پانام از سایبرپانک
         image: "aks/10.png", 
         analysis: "شما شبیه یک شخصیت از دنیای سایبرپانک هستید: مستقل، مقاوم و مدرن. شما در دنیایی پیچیده و تکنولوژیک به دنبال جایگاه خود هستید و از آزادی شخصی خود دفاع می‌کنید. توانایی بالایی در وفق دادن خود با تغییرات دارید و از چالش‌های جدید استقبال می‌کنید. شما برای انتخاب‌های خود زندگی می‌کنید و به دنبال هیجان و ماجراجویی‌های شهری هستید.",
         goodTraits: ["استقلال و خودکفایی", "مقاومت بالا در برابر ناملایمات", "مدرن و پیشرو", "توانایی بالای سازگاری", "جستجوگر هیجان و ماجراجویی"],
-        badTraits: ["عدم پایبندی به قوانین", "رفتار سرکش", "ممکن است ریسک‌پذیر باشد", "تمایل به انزوا در محیط شهری", "گاهی اوقات بی‌تفاوت به مسائل اخلاقی"]
+        badTraits: ["عدم پایبندی به قوانین", "رفتار سرکش", "ممکن است ریسک‌پذیر باشد", "تمایل به انزوا در محیط شهری", "گاهی اوقات بی‌تفاوت به مسائل اخلاقی"],
+        stats: { power: 75, agility: 80, intelligence: 85, loyalty: 65, adventure: 90 }
     }
 };
 
-// ۱۰ سوال با امتیازدهی اصلاح‌شده به ۱۰ شخصیت
 const quizQuestions = [
     {
         question: "اگر می‌توانستید یک توانایی خاص در بازی‌ها داشته باشید، کدام را انتخاب می‌کردید؟",
@@ -156,6 +165,59 @@ const quizQuestions = [
     }
 ];
 
+// NEW: Game recommendations with image placeholders
+const gameRecommendations = {
+    "کریتوس": [
+        { title: "The Witcher 3: Wild Hunt", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Witcher+3" },
+        { title: "Red Dead Redemption 2", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=RDR2" },
+        { title: "Far Cry 5", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Far+Cry+5" }
+    ],
+    "اساسین": [
+        { title: "Star Wars Outlaws", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Star+Wars" },
+        { title: "Borderlands 4", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Borderlands+4" },
+        { title: "Far Cry 5", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Far+Cry+5" }
+    ],
+    "لارا کرافت": [
+        { title: "Hogwarts Legacy", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Hogwarts+Legacy" },
+        { title: "Star Wars Outlaws", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Star+Wars" },
+        { title: "Lies of P: Overture", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Lies+of+P" }
+    ],
+    "مستر چیف": [
+        { title: "Borderlands 4", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Borderlands+4" },
+        { title: "WWE 2K25", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=WWE+2K25" },
+        { title: "Far Cry 5", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Far+Cry+5" }
+    ],
+    "گرالت": [
+        { title: "The Witcher 3: Wild Hunt", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Witcher+3" },
+        { title: "Red Dead Redemption 2", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=RDR2" },
+        { title: "Hogwarts Legacy", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Hogwarts+Legacy" }
+    ],
+    "آرتور مورگان": [
+        { title: "Red Dead Redemption 2", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=RDR2" },
+        { title: "The Witcher 3: Wild Hunt", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Witcher+3" },
+        { title: "Star Wars Outlaws", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Star+Wars" }
+    ],
+    "زلدا": [
+        { title: "Hogwarts Legacy", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Hogwarts+Legacy" },
+        { title: "Little Nightmares III", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Little+Nightmares" },
+        { title: "Lies of P: Overture", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Lies+of+P" }
+    ],
+    "جوئل": [
+        { title: "Lies of P: Overture", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Lies+of+P" },
+        { title: "Far Cry 5", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Far+Cry+5" },
+        { title: "Red Dead Redemption 2", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=RDR2" }
+    ],
+    "ماریو": [
+        { title: "EA SPORTS FC 25", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=EAFC+25" },
+        { title: "NBA 2K25", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=NBA+2K25" },
+        { title: "Little Nightmares III", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Little+Nightmares" }
+    ],
+    "دختر سایبرپانک": [
+        { title: "Star Wars Outlaws", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Star+Wars" },
+        { title: "GTA V", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=GTA+V" },
+        { title: "Borderlands 4", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Borderlands+4" }
+    ]
+};
 
 let currentQuestionIndex = 0;
 let userScores = {};
@@ -163,7 +225,6 @@ for (const char in gameCharacters) {
     userScores[char] = 0;
 }
 
-// Global variable to store the final character name for sharing
 let finalCharacterNameForShare = '';
 
 const quizContainer = document.getElementById('quiz-container');
@@ -174,24 +235,30 @@ const characterImageContainer = document.getElementById('character-image-contain
 const finalCharacterNameElement = document.getElementById('final-character-name');
 const finalCharacterAnalysis = document.getElementById('final-character-analysis');
 const shareButton = document.getElementById('share-button');
+const statsSection = document.getElementById('character-stats-section'); // Corrected ID
+const gameRecommendationSection = document.getElementById('game-recommendations-section');
+const gameListContainer = document.querySelector('.game-list');
 
-// Function to initialize quiz or reset scores
+
 function initializeQuiz() {
     currentQuestionIndex = 0;
     userScores = {};
     for (const char in gameCharacters) {
         userScores[char] = 0;
     }
-    quizContainer.style.display = 'block'; // Ensure quiz container is visible
-    resultContainer.style.display = 'none'; // Hide result container
-    shareButton.style.display = 'none'; // Hide share button
+    quizContainer.style.display = 'block';
+    resultContainer.style.display = 'none';
+    shareButton.style.display = 'none';
 
-    // Remove previously added traits section if any before displaying first question
+    // Resetting new sections
     const existingTraitsSection = resultContainer.querySelector('.traits-section');
     if (existingTraitsSection) {
         existingTraitsSection.remove();
     }
-    displayQuestion(); // Display the first question
+    gameRecommendationSection.style.display = 'none';
+    statsSection.style.display = 'none';
+
+    displayQuestion();
 }
 
 
@@ -213,11 +280,9 @@ function displayQuestion() {
                 </ul>
             </div>
         `;
-        // Make sure result container and share button are hidden when a new question is displayed
         resultContainer.style.display = 'none';
         shareButton.style.display = 'none';
         
-        // Remove previously added traits section if any (important for re-runs without full page reload)
         const existingTraitsSection = resultContainer.querySelector('.traits-section');
         if (existingTraitsSection) {
             existingTraitsSection.remove();
@@ -231,8 +296,6 @@ function displayQuestion() {
             submitButton.style.display = 'none';
         }
     } else {
-        // This case should ideally not be reached if button logic is correct
-        // but as a fallback, call showResult
         showResult();
     }
 }
@@ -278,7 +341,6 @@ function showResult() {
         finalCharacter = tieBreakerCharacters[randomIndex];
     }
     
-    // Store the final character name globally
     finalCharacterNameForShare = finalCharacter;
 
     const charInfo = gameCharacters[finalCharacter];
@@ -286,11 +348,9 @@ function showResult() {
     finalCharacterNameElement.textContent = `شخصیت گیمینگ شما: ${finalCharacter}`;
     finalCharacterAnalysis.textContent = `تحلیل: ${charInfo.analysis}`;
 
-    // === اضافه کردن نمایش ویژگی‌ها ===
     let traitsHtml = '<h3>ویژگی‌های شما:</h3>';
     traitsHtml += '<div class="traits-section">';
     
-    // Good Traits
     traitsHtml += '<div class="good-traits">';
     traitsHtml += '<h4>نقاط قوت 💪</h4>';
     traitsHtml += '<ul>';
@@ -300,7 +360,6 @@ function showResult() {
     traitsHtml += '</ul>';
     traitsHtml += '</div>';
 
-    // Bad Traits
     traitsHtml += '<div class="bad-traits">';
     traitsHtml += '<h4>چالش‌ها 🚧</h4>';
     traitsHtml += '<ul>';
@@ -310,43 +369,56 @@ function showResult() {
     traitsHtml += '</ul>';
     traitsHtml += '</div>';
     
-    traitsHtml += '</div>'; // close traits-section
+    traitsHtml += '</div>'; 
 
-    // Insert traits after analysis
     finalCharacterAnalysis.insertAdjacentHTML('afterend', traitsHtml);
-    // ===============================
 
+    // NEW: Display character stats
+    statsSection.style.display = 'block';
+    document.getElementById('power-stat').style.width = charInfo.stats.power + '%';
+    document.getElementById('intelligence-stat').style.width = charInfo.stats.intelligence + '%';
+    document.getElementById('agility-stat').style.width = charInfo.stats.agility + '%';
+    document.getElementById('loyalty-stat').style.width = charInfo.stats.loyalty + '%';
+    document.getElementById('adventure-stat').style.width = charInfo.stats.adventure + '%';
+
+
+    // NEW: Display game recommendations
+    const recommendedGames = gameRecommendations[finalCharacter];
+    gameListContainer.innerHTML = `
+        ${recommendedGames.map(game => `
+            <div class="game-card">
+                <img src="${game.image}" alt="${game.title}">
+                <span>${game.title}</span>
+            </div>
+        `).join('')}
+    `;
+    gameRecommendationSection.style.display = 'flex';
+    
     resultContainer.classList.add('fade-in-scale');
-    shareButton.style.display = 'block'; // Show the share button
+    shareButton.style.display = 'block';
 }
 
-// Function to handle sharing
 function shareResult() {
     const characterName = finalCharacterNameForShare;
     const analysis = gameCharacters[characterName].analysis;
-    // window.location.href automatically gets the current page's URL
     const shareText = `من در آزمون شخصیت‌شناسی گیم‌رنتر، شخصیت "${characterName}" شدم! 🎮\n\n${analysis}\n\nشما هم امتحان کنید: ${window.location.href}`;
 
     if (navigator.share) {
-        // Web Share API for native sharing
         navigator.share({
             title: 'آزمون شخصیت‌شناسی گیم‌رنتر',
             text: shareText,
-            url: window.location.href, // This will be the URL of the page the user is currently on
+            url: window.location.href,
         }).then(() => {
             console.log('Shared successfully');
         }).catch((error) => {
             console.error('Error sharing:', error);
-            // Fallback to clipboard if native share fails or is not supported
             copyToClipboard(shareText);
         });
     } else {
-        // Fallback for browsers that don't support Web Share API
         copyToClipboard(shareText);
     }
 }
 
-// Helper function to copy text to clipboard
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(() => {
         alert("نتیجه آزمون کپی شد! می‌تونید اون رو در شبکه‌های اجتماعی به اشتراک بذارید.");
@@ -367,14 +439,13 @@ nextButton.addEventListener('click', () => {
 });
 
 submitButton.addEventListener('click', () => {
-    if (selectAnswer()) { // Ensure the last question is answered
+    if (selectAnswer()) {
         showResult();
     } else {
         alert("لطفاً یک گزینه را انتخاب کنید!");
     }
 });
 
-shareButton.addEventListener('click', shareResult); // Add event listener for the share button
+shareButton.addEventListener('click', shareResult);
 
-// Initial call to start the quiz when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', initializeQuiz);
