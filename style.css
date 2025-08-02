@@ -32,66 +32,7 @@ body {
     direction: rtl;
     text-align: right;
     overflow-x: hidden; /* Prevent horizontal scroll on mobile */
-    position: relative; /* Needed for ::before pseudo-element */
-    z-index: 1; /* Ensure content is above background particles */
 }
-
-/* NEW: Background Particles */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(30, 0, 0, 0.5) 0%, rgba(18, 18, 18, 1) 70%); /* Subtle red glow from center */
-    z-index: -1; /* Behind everything */
-    pointer-events: none; /* Allows clicks to pass through */
-    animation: backgroundGlow 15s ease-in-out infinite alternate;
-}
-
-@keyframes backgroundGlow {
-    0% { background: radial-gradient(circle at center, rgba(30, 0, 0, 0.5) 0%, rgba(18, 18, 18, 1) 70%); }
-    50% { background: radial-gradient(circle at 20% 80%, rgba(50, 0, 0, 0.6) 0%, rgba(18, 18, 18, 1) 80%); }
-    100% { background: radial-gradient(circle at center, rgba(30, 0, 0, 0.5) 0%, rgba(18, 18, 18, 1) 70%); }
-}
-
-
-/* NEW: Moving Particles - Pure CSS */
-.container::before, .container::after {
-    content: '';
-    position: absolute;
-    background-color: rgba(255, 51, 51, 0.3); /* Red dots */
-    border-radius: 50%;
-    z-index: -1;
-    pointer-events: none;
-    animation: moveParticles 25s linear infinite alternate;
-}
-
-.container::before {
-    width: 10px;
-    height: 10px;
-    top: 10%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.container::after {
-    width: 8px;
-    height: 8px;
-    top: 80%;
-    left: 90%;
-    animation-delay: 10s;
-}
-
-@keyframes moveParticles {
-    0% { transform: translate(0, 0) scale(1); opacity: 0.3; }
-    25% { transform: translate(100px, 50px) scale(1.1); opacity: 0.5; }
-    50% { transform: translate(200px, -100px) scale(0.9); opacity: 0.4; }
-    75% { transform: translate(50px, -150px) scale(1.2); opacity: 0.6; }
-    100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
-}
-
 
 /* --- Container Styling --- */
 .container {
@@ -105,14 +46,6 @@ body::before {
     overflow: hidden;
     transform: perspective(1000px) rotateX(0deg); /* Initial state for 3D effect */
     transition: transform 0.5s ease-out;
-    border: 1px solid rgba(255, 0, 0, 0.1); /* Even more subtle border */
-    /* NEW: Add a slight depth/hover effect to the container itself */
-    animation: containerPulse 8s ease-in-out infinite alternate;
-}
-
-@keyframes containerPulse {
-    0% { transform: translateY(0) scale(1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(255, 0, 0, 0.4); }
-    100% { transform: translateY(-5px) scale(1.005); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 0 0 10px 3px rgba(255, 0, 0, 0.6); }
 }
 
 /* --- Logo Styling --- */
@@ -125,13 +58,6 @@ body::before {
     max-width: 200px; /* Adjust as needed */
     height: auto;
     filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.6)); /* Soft red glow for logo */
-    /* NEW: Subtle animation for logo */
-    animation: logoBounce 4s ease-in-out infinite alternate;
-}
-
-@keyframes logoBounce {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-5px); }
 }
 
 
@@ -145,8 +71,6 @@ h1 {
     text-shadow: 0 0 15px rgba(255, 0, 0, 0.7); /* Stronger red glow */
     letter-spacing: 1.5px;
     position: relative;
-    /* NEW: Title subtle flicker */
-    animation: textFlicker 2s steps(2, start) infinite alternate;
 }
 
 h1::after {
@@ -157,11 +81,6 @@ h1::after {
     background: linear-gradient(to right, transparent, #ff3333, transparent);
     margin: 15px auto 0;
     border-radius: 2px;
-}
-
-@keyframes textFlicker {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.95; }
 }
 
 
@@ -226,7 +145,7 @@ h1::after {
     cursor: pointer;
 }
 
-/* Custom checkbox/radio style */
+/* Custom checkbox/radio style - optional, but enhances look */
 .options-list label input[type="radio"] {
     appearance: none; /* Hide default radio button */
     -webkit-appearance: none;
@@ -284,9 +203,6 @@ h1::after {
     font-weight: bold;
     text-transform: uppercase;
     box-shadow: 0 0 15px rgba(255, 0, 0, 0.6); /* Initial glow */
-    /* NEW: Button hover animation */
-    overflow: hidden; /* For shine effect */
-    position: relative;
 }
 
 .quiz-button:hover {
@@ -294,24 +210,6 @@ h1::after {
     transform: translateY(-3px); /* Slight lift */
     box-shadow: 0 0 25px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.5); /* Stronger glow on hover */
 }
-
-/* NEW: Button Shine Effect */
-.quiz-button::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    transform: skewX(-20deg);
-    transition: all 0.7s ease;
-}
-
-.quiz-button:hover::after {
-    left: 100%;
-}
-
 
 /* Share Button Specific Style */
 .share-button {
@@ -349,18 +247,10 @@ h1::after {
     box-shadow: 0 0 30px rgba(255, 0, 0, 0.7), 0 0 50px rgba(255, 0, 0, 0.4); /* Strong red glow */
     border: 5px solid #ff3333; /* Red border */
     transition: transform 0.4s ease-in-out;
-    /* NEW: Image pulse effect */
-    animation: imagePulse 3s ease-in-out infinite alternate;
-}
-
-@keyframes imagePulse {
-    0% { transform: scale(1); box-shadow: 0 0 30px rgba(255, 0, 0, 0.7), 0 0 50px rgba(255, 0, 0, 0.4); }
-    100% { transform: scale(1.02); box-shadow: 0 0 40px rgba(255, 0, 0, 0.8), 0 0 60px rgba(255, 0, 0, 0.5); }
 }
 
 #character-image-container img:hover {
     transform: scale(1.08); /* More pronounced zoom effect on hover */
-    animation: none; /* Stop pulse on hover for smoother zoom */
 }
 
 #final-character-name {
@@ -369,15 +259,7 @@ h1::after {
     margin-top: 25px;
     font-size: 2.8em;
     text-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4);
-    /* NEW: Name text glow */
-    animation: nameGlow 2s ease-in-out infinite alternate;
 }
-
-@keyframes nameGlow {
-    0% { text-shadow: 0 0 10px rgba(255, 0, 0, 0.6); }
-    100% { text-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 25px rgba(255, 0, 0, 0.5); }
-}
-
 
 #final-character-analysis {
     font-family: 'IRANSans', Arial, sans-serif;
@@ -463,7 +345,125 @@ h1::after {
     top: 2px;
 }
 
-/* --- Social Media Promotion Section Styles --- */
+/* NEW: Styles for Character Stats */
+#character-stats-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 51, 51, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+#character-stats-section h3 {
+    font-family: 'IRANSans', Arial, sans-serif;
+    color: #ff6666;
+    font-size: 1.6em;
+    margin-bottom: 25px;
+    text-shadow: 0 0 5px rgba(255, 102, 102, 0.3);
+}
+
+.stats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.stat-item span {
+    font-family: 'IRANSans', sans-serif;
+    font-size: 1.1em;
+    color: #f0f0f0;
+    font-weight: bold;
+    min-width: 80px;
+    text-align: right;
+}
+
+.stat-bar {
+    background-color: #383838;
+    height: 15px;
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.stat-fill {
+    height: 100%;
+    background-color: #ff3333;
+    transition: width 1s ease-out;
+    border-radius: 10px;
+}
+
+
+/* NEW: Styles for Game Recommendations */
+#game-recommendations-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 51, 51, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+#game-recommendations-section h3 {
+    font-family: 'IRANSans', Arial, sans-serif;
+    color: #ff6666;
+    font-size: 1.6em;
+    margin-bottom: 25px;
+    text-shadow: 0 0 5px rgba(255, 102, 102, 0.3);
+}
+
+.game-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.game-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333333;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    width: 180px; /* Adjust card size */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+}
+
+.game-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.game-card span {
+    font-family: 'IRANSans', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+/* Social Media Promotion Section Styles */
 .social-promo-section {
     margin-top: 40px;
     padding-top: 30px;
@@ -519,13 +519,12 @@ h1::after {
     text-align: center;
 }
 
-/* --- Animations --- */
+/* Animations */
 @keyframes fadeInScale {
     from { opacity: 0; transform: translateY(20px) scale(0.95); }
     to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* --- Responsive Design (Media Queries) --- */
 @media (max-width: 768px) {
     body {
         padding: 15px;
@@ -603,6 +602,21 @@ h1::after {
         font-size: 1em;
     }
 
+    #game-recommendations-section h3 {
+        font-size: 1.4em;
+    }
+    .game-list li {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+    .game-card img {
+        width: 120px;
+        height: 120px;
+    }
+    .game-card span {
+        font-size: 0.9em;
+    }
+
     .social-promo-section h3 {
         font-size: 1.4em;
     }
@@ -665,16 +679,27 @@ h1::after {
         margin-top: 15px;
     }
 
+    #result-container {
+        padding: 25px;
+        border-radius: 10px;
+    }
     #character-image-container img {
         max-width: 180px;
         border: 3px solid #ff3333;
     }
-
     #final-character-name {
         font-size: 1.6em;
     }
 
     #final-character-analysis {
         font-size: 1.1em;
+    }
+
+    .game-card {
+        width: 150px;
+    }
+    .game-card img {
+        width: 100px;
+        height: 100px;
     }
 }
