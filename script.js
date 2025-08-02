@@ -168,54 +168,54 @@ const quizQuestions = [
 // NEW: Game recommendations with image placeholders
 const gameRecommendations = {
     "کریتوس": [
-        { title: "The Witcher 3: Wild Hunt", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Witcher+3" },
-        { title: "Red Dead Redemption 2", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=RDR2" },
-        { title: "Far Cry 5", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Far+Cry+5" }
+        { title: "The Witcher 3: Wild Hunt", image: "https://gamerenter.ir/product/the-witcher-3-wild-hunt-xbox-dig" },
+        { title: "Red Dead Redemption 2", image: "https://gamerenter.ir/product/red-dead-redemption-2-xbox-dig" },
+        { title: "Far Cry 5", image: "https://gamerenter.ir/product/far-cry-5-xbox-dig" }
     ],
     "اساسین": [
-        { title: "Star Wars Outlaws", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Star+Wars" },
-        { title: "Borderlands 4", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Borderlands+4" },
-        { title: "Far Cry 5", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Far+Cry+5" }
+        { title: "Star Wars Outlaws", image: "https://gamerenter.ir/product/star-wars-outlaws-xbox-dig" },
+        { title: "Borderlands 4", image: "https://gamerenter.ir/product/borderlands-4-xbox-dig" },
+        { title: "Far Cry 5", image: "https://gamerenter.ir/product/far-cry-5-xbox-dig" }
     ],
     "لارا کرافت": [
-        { title: "Hogwarts Legacy", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Hogwarts+Legacy" },
-        { title: "Star Wars Outlaws", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Star+Wars" },
-        { title: "Lies of P: Overture", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Lies+of+P" }
+        { title: "Hogwarts Legacy", image: "https://gamerenter.ir/product/hogwarts-legacy-xbox-dig" },
+        { title: "Star Wars Outlaws", image: "https://gamerenter.ir/product/star-wars-outlaws-xbox-dig" },
+        { title: "Lies of P: Overture", image: "https://gamerenter.ir/product/lies-of-p-xbox-dig" }
     ],
     "مستر چیف": [
-        { title: "Borderlands 4", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Borderlands+4" },
-        { title: "WWE 2K25", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=WWE+2K25" },
-        { title: "Far Cry 5", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Far+Cry+5" }
+        { title: "Borderlands 4", image: "https://gamerenter.ir/product/borderlands-4-xbox-dig" },
+        { title: "WWE 2K25", image: "https://gamerenter.ir/product/nba-2k25-xbox-dig" },
+        { title: "Far Cry 5", image: "https://gamerenter.ir/product/far-cry-5-xbox-dig" }
     ],
     "گرالت": [
-        { title: "The Witcher 3: Wild Hunt", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Witcher+3" },
-        { title: "Red Dead Redemption 2", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=RDR2" },
-        { title: "Hogwarts Legacy", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Hogwarts+Legacy" }
+        { title: "The Witcher 3: Wild Hunt", image: "https://gamerenter.ir/product/the-witcher-3-wild-hunt-xbox-dig" },
+        { title: "Red Dead Redemption 2", image: "https://gamerenter.ir/product/red-dead-redemption-2-xbox-dig" },
+        { title: "Hogwarts Legacy", image: "https://gamerenter.ir/product/hogwarts-legacy-xbox-dig" }
     ],
     "آرتور مورگان": [
-        { title: "Red Dead Redemption 2", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=RDR2" },
-        { title: "The Witcher 3: Wild Hunt", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Witcher+3" },
-        { title: "Star Wars Outlaws", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Star+Wars" }
+        { title: "Red Dead Redemption 2", image: "https://gamerenter.ir/product/red-dead-redemption-2-xbox-dig" },
+        { title: "The Witcher 3: Wild Hunt", image: "https://gamerenter.ir/product/the-witcher-3-wild-hunt-xbox-dig" },
+        { title: "Star Wars Outlaws", image: "https://gamerenter.ir/product/star-wars-outlaws-xbox-dig" }
     ],
     "زلدا": [
-        { title: "Hogwarts Legacy", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Hogwarts+Legacy" },
-        { title: "Little Nightmares III", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Little+Nightmares" },
-        { title: "Lies of P: Overture", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Lies+of+P" }
+        { title: "Hogwarts Legacy", image: "https://gamerenter.ir/product/hogwarts-legacy-xbox-dig" },
+        { title: "Little Nightmares III", image: "https://gamerenter.ir/product/little-nightmares-iii-xbox-dig" },
+        { title: "Lies of P: Overture", image: "https://gamerenter.ir/product/lies-of-p-xbox-dig" }
     ],
     "جوئل": [
-        { title: "Lies of P: Overture", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Lies+of+P" },
-        { title: "Far Cry 5", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Far+Cry+5" },
-        { title: "Red Dead Redemption 2", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=RDR2" }
+        { title: "Lies of P: Overture", image: "https://gamerenter.ir/product/lies-of-p-xbox-dig" },
+        { title: "Far Cry 5", image: "https://gamerenter.ir/product/far-cry-5-xbox-dig" },
+        { title: "Red Dead Redemption 2", image: "https://gamerenter.ir/product/red-dead-redemption-2-xbox-dig" }
     ],
     "ماریو": [
-        { title: "EA SPORTS FC 25", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=EAFC+25" },
-        { title: "NBA 2K25", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=NBA+2K25" },
-        { title: "Little Nightmares III", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Little+Nightmares" }
+        { title: "EA SPORTS FC 25", image: "https://gamerenter.ir/product/ea-sports-fc-25-xbox-dig" },
+        { title: "NBA 2K25", image: "https://gamerenter.ir/product/nba-2k25-xbox-dig" },
+        { title: "Little Nightmares III", image: "https://gamerenter.ir/product/little-nightmares-iii-xbox-dig" }
     ],
     "دختر سایبرپانک": [
-        { title: "Star Wars Outlaws", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Star+Wars" },
-        { title: "GTA V", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=GTA+V" },
-        { title: "Borderlands 4", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Borderlands+4" }
+        { title: "Star Wars Outlaws", image: "https://gamerenter.ir/product/star-wars-outlaws-xbox-dig" },
+        { title: "GTA V", image: "https://gamerenter.ir/product/grand-theft-auto-v-xbox-dig" },
+        { title: "Borderlands 4", image: "https://gamerenter.ir/product/borderlands-4-xbox-dig" }
     ]
 };
 
@@ -449,3 +449,4 @@ submitButton.addEventListener('click', () => {
 shareButton.addEventListener('click', shareResult);
 
 document.addEventListener('DOMContentLoaded', initializeQuiz);
+
