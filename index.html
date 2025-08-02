@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>آزمون شخصیت‌شناسی گیم‌رنتر</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <div class="container">
@@ -21,6 +22,37 @@
                 </div>
             <h2 id="final-character-name"></h2>
             <p id="final-character-analysis"></p>
+            
+            <div id="character-stats-section" style="display: none;">
+                <h3>شخصیت شما در یک نگاه:</h3>
+                <div class="stats-list">
+                    <div class="stat-item">
+                        <span>قدرت</span>
+                        <div class="stat-bar"><div class="stat-fill" id="power-stat"></div></div>
+                    </div>
+                    <div class="stat-item">
+                        <span>هوش</span>
+                        <div class="stat-bar"><div class="stat-fill" id="intelligence-stat"></div></div>
+                    </div>
+                    <div class="stat-item">
+                        <span>چابکی</span>
+                        <div class="stat-bar"><div class="stat-fill" id="agility-stat"></div></div>
+                    </div>
+                    <div class="stat-item">
+                        <span>وفاداری</span>
+                        <div class="stat-bar"><div class="stat-fill" id="loyalty-stat"></div></div>
+                    </div>
+                    <div class="stat-item">
+                        <span>ماجراجویی</span>
+                        <div class="stat-bar"><div class="stat-fill" id="adventure-stat"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="game-recommendations-section" style="display: none;">
+                <h3>بازی‌های پیشنهادی گیم‌رنتر برای شما:</h3>
+                <div class="game-list">
+                    </div>
+            </div>
             <button id="share-button" class="quiz-button share-button">اشتراک‌گذاری نتیجه</button> 
             
             <div class="social-promo-section">
@@ -42,7 +74,7 @@
             </div>
             </div>
     </div>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
