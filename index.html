@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>آزمون شخصیت‌شناسی گیم‌رنتر</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
     <div class="container">
         <div class="logo-container">
-            <img src="aks/gameranter-logo.png" alt="لوگوی گیم‌رنتر" class="gameranter-logo"> 
+            <img src="aks/gameranter-logo.png" alt="لوگوی گیم‌رنتر" class="gameranter-logo">
         </div>
         <h1>آزمون شخصیت‌شناسی گیم‌رنتر</h1>
         <div id="quiz-container" class="fade-in">
@@ -28,54 +27,64 @@
                 <div class="stats-list">
                     <div class="stat-item">
                         <span>قدرت</span>
-                        <div class="stat-bar"><div class="stat-fill" id="power-stat"></div></div>
+                        <div class="stat-bar"><div class="stat-fill" id="power-stat"><span class="stat-percent"></span></div></div>
                     </div>
                     <div class="stat-item">
                         <span>هوش</span>
-                        <div class="stat-bar"><div class="stat-fill" id="intelligence-stat"></div></div>
+                        <div class="stat-bar"><div class="stat-fill" id="intelligence-stat"><span class="stat-percent"></span></div></div>
                     </div>
                     <div class="stat-item">
                         <span>چابکی</span>
-                        <div class="stat-bar"><div class="stat-fill" id="agility-stat"></div></div>
+                        <div class="stat-bar"><div class="stat-fill" id="agility-stat"><span class="stat-percent"></span></div></div>
                     </div>
                     <div class="stat-item">
                         <span>وفاداری</span>
-                        <div class="stat-bar"><div class="stat-fill" id="loyalty-stat"></div></div>
+                        <div class="stat-bar"><div class="stat-fill" id="loyalty-stat"><span class="stat-percent"></span></div></div>
                     </div>
                     <div class="stat-item">
                         <span>ماجراجویی</span>
-                        <div class="stat-bar"><div class="stat-fill" id="adventure-stat"></div></div>
+                        <div class="stat-bar"><div class="stat-fill" id="adventure-stat"><span class="stat-percent"></span></div></div>
                     </div>
                 </div>
             </div>
             <div id="game-recommendations-section" style="display: none;">
-                <h3>بازی‌های پیشنهادی گیم‌رنتر برای شما:</h3>
+                <h3 class="centered-title">بازی‌های پیشنهادی گیم‌رنتر برای شما:</h3>
                 <div class="game-list">
                     </div>
             </div>
-            <button id="share-button" class="quiz-button share-button">اشتراک‌گذاری نتیجه</button> 
-            
+            <div id="movie-recommendations-section" style="display: none;">
+                <h3 class="centered-title">فیلم‌های پیشنهادی برای شما:</h3>
+                <div class="movie-list">
+                    </div>
+            </div>
+            <div class="button-group">
+                <button id="retake-quiz-button" class="quiz-button" style="display: none;">آزمون دوباره</button>
+                <button id="share-button" class="quiz-button share-button">اشتراک‌گذاری نتیجه</button>
+            </div>
+
             <div class="social-promo-section">
                 <h3>گیم‌رنتر را در شبکه‌های اجتماعی دنبال کنید:</h3>
                 <div class="social-links">
-                    <a href="instagram.com/gamerenter" target="_blank" class="social-link instagram">
-                        <img src="http://googleusercontent.com/image_generation_content/17" alt="اینستاگرام گیم‌رنتر">
-                        <span>صفحه اینستاگرام گیم‌رنتر</span>
+                    <a href="YOUR_INSTAGRAM_LINK" target="_blank" class="social-link instagram">
+                        <img src="http://googleusercontent.com/image_generation_content/79" alt="اینستاگرام گیم‌رنتر">
+                        <span>صفحه اینستاگرام</span>
                     </a>
-                    <a href="t.me/gamerenterchannel" target="_blank" class="social-link telegram">
-                        <img src="http://googleusercontent.com/image_generation_content/16" alt="تلگرام گیم‌رنتر">
-                        <span>کانال تلگرام گیم‌رنتر</span>
+                    <a href="YOUR_TELEGRAM_LINK" target="_blank" class="social-link telegram">
+                        <img src="http://googleusercontent.com/image_generation_content/77" alt="تلگرام گیم‌رنتر">
+                        <span>کانال تلگرام</span>
                     </a>
-                    <a href="www.gamerenter.ir" target="_blank" class="social-link website">
-                        <img src="http://googleusercontent.com/image_generation_content/15" alt="وبسایت گیم‌رنتر">
+                    <a href="YOUR_TWITTER_LINK" target="_blank" class="social-link twitter">
+                        <img src="http://googleusercontent.com/image_generation_content/78" alt="توییتر گیم‌رنتر">
+                        <span>صفحه توییتر</span>
+                    </a>
+                    <a href="YOUR_WEBSITE_LINK" target="_blank" class="social-link website">
+                        <img src="aks/website-logo.png" alt="وبسایت گیم‌رنتر">
                         <span>وبسایت گیم‌رنتر</span>
                     </a>
                 </div>
             </div>
             </div>
     </div>
-    
     <script src="script.js"></script>
 </body>
 </html>
-
