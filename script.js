@@ -1,4 +1,10 @@
-// تعریف ۱۰ شخصیت گیمینگ با نام، مسیر تصویر، تحلیل کوتاه، ویژگی‌های خوب، بد، کپی‌رایت و آمار
+// Function to convert English/Arabic numbers to Farsi
+function toFarsi(number) {
+    const farsi = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+    return number.toString().replace(/\d/g, d => farsi[d]);
+}
+
+// تعریف ۱۰ شخصیت گیمینگ با نام، مسیر تصویر، تحلیل کوتاه، ویژگی‌های خوب، بد و آمار
 const gameCharacters = {
     "کریتوس": {
         image: "aks/1.png", 
@@ -165,57 +171,250 @@ const quizQuestions = [
     }
 ];
 
-// NEW: Game recommendations with image placeholders
 const gameRecommendations = {
     "کریتوس": [
-        { title: "The Witcher 3: Wild Hunt", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9712/70d3517f1b7ca12f3233bbe982ed3556.webp?w=800&h=800" },
-        { title: "Red Dead Redemption 2", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9710/8e52ee4f0c5a4f8d4e68f2456a373137.webp?w=800&h=800" },
-        { title: "Far Cry 5", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9714/24d2a4ef00d865610bf99ce1a9bcd6ce.webp?w=800&h=800" }
+        { title: "The Witcher 3: Wild Hunt", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Witcher+3", metascore: 93, link: "#" },
+        { title: "Red Dead Redemption 2", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=RDR2", metascore: 97, link: "#" },
+        { title: "Far Cry 5", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Far+Cry+5", metascore: 81, link: "#" },
+        { title: "Cyberpunk 2077", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Cyberpunk+2077", metascore: 86, link: "#" }
     ],
     "اساسین": [
-        { title: "Star Wars Outlaws", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9370/c9c9df70b779128cd21fd021d5982b67.webp?w=800&h=800" },
-        { title: "Borderlands 4", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9492/c69b76b27c6a941e6c5954bf85dd640e.webp?w=800&h=800" },
-        { title: "Far Cry 5", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9714/24d2a4ef00d865610bf99ce1a9bcd6ce.webp?w=800&h=800" }
+        { title: "Star Wars Outlaws", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Star+Wars", metascore: 85, link: "#" },
+        { title: "Borderlands 4", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Borderlands+4", metascore: 88, link: "#" },
+        { title: "Far Cry 5", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Far+Cry+5", metascore: 81, link: "#" },
+        { title: "Hitman 3", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Hitman+3", metascore: 87, link: "#" }
     ],
     "لارا کرافت": [
-        { title: "Hogwarts Legacy", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9738/ad9b67b52bb7701c3f5c32d0aeeb135e.webp?w=800&h=800" },
-        { title: "Star Wars Outlaws", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9370/c9c9df70b779128cd21fd021d5982b67.webp?w=800&h=800" },
-        { title: "Lies of P: Overture", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9387/2050fbdbfb7b549fcafb39d5da074029.webp?w=800&h=800" }
+        { title: "Hogwarts Legacy", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Hogwarts+Legacy", metascore: 84, link: "#" },
+        { title: "Star Wars Outlaws", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Star+Wars", metascore: 85, link: "#" },
+        { title: "Lies of P: Overture", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Lies+of+P", metascore: 80, link: "#" },
+        { title: "Elden Ring", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Elden+Ring", metascore: 96, link: "#" }
     ],
     "مستر چیف": [
-        { title: "Borderlands 4", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9492/c69b76b27c6a941e6c5954bf85dd640e.webp?w=800&h=800" },
-        { title: "WWE 2K25", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/8523/2be39fa42afa5215987e6c0713623de4.webp?w=800&h=800" },
-        { title: "Far Cry 5", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9714/24d2a4ef00d865610bf99ce1a9bcd6ce.webp?w=800&h=800" }
+        { title: "Borderlands 4", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Borderlands+4", metascore: 88, link: "#" },
+        { title: "WWE 2K25", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=WWE+2K25", metascore: 78, link: "#" },
+        { title: "Far Cry 5", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Far+Cry+5", metascore: 81, link: "#" },
+        { title: "Halo Infinite", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Halo+Infinite", metascore: 87, link: "#" }
     ],
     "گرالت": [
-        { title: "The Witcher 3: Wild Hunt", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9712/70d3517f1b7ca12f3233bbe982ed3556.webp?w=800&h=800" },
-        { title: "Red Dead Redemption 2", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9710/8e52ee4f0c5a4f8d4e68f2456a373137.webp?w=800&h=800" },
-        { title: "Hogwarts Legacy", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9738/ad9b67b52bb7701c3f5c32d0aeeb135e.webp?w=800&h=800" }
+        { title: "The Witcher 3: Wild Hunt", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Witcher+3", metascore: 93, link: "#" },
+        { title: "Red Dead Redemption 2", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=RDR2", metascore: 97, link: "#" },
+        { title: "Hogwarts Legacy", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Hogwarts+Legacy", metascore: 84, link: "#" },
+        { title: "The Last of Us Part I", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Last+of+Us", metascore: 88, link: "#" }
     ],
     "آرتور مورگان": [
-        { title: "Red Dead Redemption 2", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9710/8e52ee4f0c5a4f8d4e68f2456a373137.webp?w=800&h=800" },
-        { title: "The Witcher 3: Wild Hunt", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9712/70d3517f1b7ca12f3233bbe982ed3556.webp?w=800&h=800" },
-        { title: "Star Wars Outlaws", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9370/c9c9df70b779128cd21fd021d5982b67.webp?w=800&h=800" }
+        { title: "Red Dead Redemption 2", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=RDR2", metascore: 97, link: "#" },
+        { title: "The Witcher 3: Wild Hunt", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Witcher+3", metascore: 93, link: "#" },
+        { title: "Star Wars Outlaws", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Star+Wars", metascore: 85, link: "#" },
+        { title: "Far Cry 5", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Far+Cry+5", metascore: 81, link: "#" }
     ],
     "زلدا": [
-        { title: "Hogwarts Legacy", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9738/ad9b67b52bb7701c3f5c32d0aeeb135e.webp?w=800&h=800" },
-        { title: "Little Nightmares III", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9491/d3ac0237d4f979d6b17969adfc1b0412.webp?w=800&h=800" },
-        { title: "Lies of P: Overture", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9387/2050fbdbfb7b549fcafb39d5da074029.webp?w=800&h=800" }
+        { title: "Hogwarts Legacy", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Hogwarts+Legacy", metascore: 84, link: "#" },
+        { title: "Little Nightmares III", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Little+Nightmares", metascore: 82, link: "#" },
+        { title: "Lies of P: Overture", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Lies+of+P", metascore: 80, link: "#" },
+        { title: "The Legend of Zelda: Tears of the Kingdom", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Zelda+ToTK", metascore: 96, link: "#" }
     ],
     "جوئل": [
-        { title: "Lies of P: Overture", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9387/2050fbdbfb7b549fcafb39d5da074029.webp?w=800&h=800" },
-        { title: "Far Cry 5", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9714/24d2a4ef00d865610bf99ce1a9bcd6ce.webp?w=800&h=800" },
-        { title: "Red Dead Redemption 2", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9710/8e52ee4f0c5a4f8d4e68f2456a373137.webp?w=800&h=800" }
+        { title: "Lies of P: Overture", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Lies+of+P", metascore: 80, link: "#" },
+        { title: "Far Cry 5", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Far+Cry+5", metascore: 81, link: "#" },
+        { title: "Red Dead Redemption 2", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=RDR2", metascore: 97, link: "#" },
+        { title: "The Last of Us Part I", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Last+of+Us", metascore: 88, link: "#" }
     ],
     "ماریو": [
-        { title: "EA SPORTS FC 25", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9163/435e51cc9780af7885d2699dd183baa4.webp?w=800&h=800" },
-        { title: "NBA 2K25", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9059/4898118b108f648bf7972546bf251e69.webp?w=800&h=800" },
-        { title: "Little Nightmares III", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9491/d3ac0237d4f979d6b17969adfc1b0412.webp?w=800&h=800" }
+        { title: "EA SPORTS FC 25", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=EAFC+25", metascore: 83, link: "#" },
+        { title: "NBA 2K25", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=NBA+2K25", metascore: 79, link: "#" },
+        { title: "Little Nightmares III", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Little+Nightmares", metascore: 82, link: "#" },
+        { title: "FIFA 24", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=FIFA+24", metascore: 80, link: "#" }
     ],
     "دختر سایبرپانک": [
-        { title: "Star Wars Outlaws", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9370/c9c9df70b779128cd21fd021d5982b67.webp?w=800&h=800" },
-        { title: "GTA V", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9711/159420f8c4e69a8f87e30a12f2a33e73.webp?w=800&h=800" },
-        { title: "Borderlands 4", image: "https://oss.sazito.com/apiuploads/gamerenter/uploads/image/rootimage/9492/c69b76b27c6a941e6c5954bf85dd640e.webp?w=800&h=800" }
+        { title: "Star Wars Outlaws", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Star+Wars", metascore: 85, link: "#" },
+        { title: "GTA V", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=GTA+V", metascore: 97, link: "#" },
+        { title: "Borderlands 4", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Borderlands+4", metascore: 88, link: "#" },
+        { title: "Cyberpunk 2077", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Cyberpunk+2077", metascore: 86, link: "#" }
+    ]
+};
+
+// NEW: Movie recommendations with image and link placeholders
+const movieRecommendations = {
+    "کریتوس": [
+        { title: "300", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=300", metascore: 52, link: "#" },
+        { title: "Gladiator", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Gladiator", metascore: 67, link: "#" },
+        { title: "Mad Max: Fury Road", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Mad+Max", metascore: 90, link: "#" },
+        { title: "Logan", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Logan", metascore: 77, link: "#" },
+        { title: "The Northman", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Northman", metascore: 82, link: "#" },
+        { title: "Braveheart", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Braveheart", metascore: 68, link: "#" },
+        { title: "Conan the Barbarian", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Conan", metascore: 43, link: "#" },
+        { title: "Troy", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Troy", metascore: 56, link: "#" },
+        { title: "Apocalypto", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Apocalypto", metascore: 68, link: "#" },
+        { title: "Dune", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Dune", metascore: 83, link: "#" },
+        { title: "The Last Samurai", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Last+Samurai", metascore: 62, link: "#" },
+        { title: "Saving Private Ryan", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Saving+Private+Ryan", metascore: 91, link: "#" },
+        { title: "30 Days of Night", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=30+Days+of+Night", metascore: 54, link: "#" },
+        { title: "The Revenant", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Revenant", metascore: 76, link: "#" },
+        { title: "Sicario", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Sicario", metascore: 82, link: "#" },
+        { title: "Fury", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Fury", metascore: 72, link: "#" }
+    ],
+    "اساسین": [
+        { title: "The Bourne Identity", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Bourne", metascore: 68, link: "#" },
+        { title: "John Wick", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=John+Wick", metascore: 68, link: "#" },
+        { title: "Mission: Impossible - Fallout", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=MI+Fallout", metascore: 86, link: "#" },
+        { title: "V for Vendetta", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=V+for+Vendetta", metascore: 62, link: "#" },
+        { title: "The Dark Knight", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Dark+Knight", metascore: 84, link: "#" },
+        { title: "Kingsman: The Secret Service", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Kingsman", metascore: 60, link: "#" },
+        { title: "Casino Royale", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Casino+Royale", metascore: 80, link: "#" },
+        { title: "The Equalizer", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Equalizer", metascore: 57, link: "#" },
+        { title: "Atomic Blonde", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Atomic+Blonde", metascore: 63, link: "#" },
+        { title: "The Girl with the Dragon Tattoo", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Dragon+Tattoo", metascore: 71, link: "#" },
+        { title: "Léon: The Professional", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Leon", metascore: 64, link: "#" },
+        { title: "Taken", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Taken", metascore: 51, link: "#" },
+        { title: "Oldboy", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Oldboy", metascore: 77, link: "#" },
+        { title: "Drive", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Drive", metascore: 78, link: "#" },
+        { title: "Nobody", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Nobody", metascore: 64, link: "#" },
+        { title: "Sicario", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Sicario", metascore: 82, link: "#" }
+    ],
+    "لارا کرافت": [
+        { title: "Indiana Jones: Raiders of the Lost Ark", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Indy+Jones", metascore: 85, link: "#" },
+        { title: "The Mummy", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Mummy", metascore: 48, link: "#" },
+        { title: "National Treasure", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=National+Treasure", metascore: 44, link: "#" },
+        { title: "Tomb Raider", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Tomb+Raider", metascore: 48, link: "#" },
+        { title: "Jumanji: Welcome to the Jungle", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Jumanji", metascore: 58, link: "#" },
+        { title: "The Goonies", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Goonies", metascore: 62, link: "#" },
+        { title: "Sahara", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Sahara", metascore: 41, link: "#" },
+        { title: "Uncharted", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Uncharted", metascore: 45, link: "#" },
+        { title: "King Solomon's Mines", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Solomon's+Mines", metascore: 53, link: "#" },
+        { title: "Romancing the Stone", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Romancing+Stone", metascore: 75, link: "#" },
+        { title: "The Lost City", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Lost+City", metascore: 60, link: "#" },
+        { title: "Journey to the Center of the Earth", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Journey", metascore: 57, link: "#" },
+        { title: "Treasure Island", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Treasure+Island", metascore: 63, link: "#" },
+        { title: "The Lord of the Rings: The Fellowship of the Ring", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=LotR", metascore: 92, link: "#" },
+        { title: "Pirates of the Caribbean: The Curse of the Black Pearl", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Pirates", metascore: 63, link: "#" },
+        { title: "Jurassic Park", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Jurassic+Park", metascore: 68, link: "#" }
+    ],
+    "مستر چیف": [
+        { title: "Starship Troopers", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Starship+Troopers", metascore: 62, link: "#" },
+        { title: "Aliens", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Aliens", metascore: 84, link: "#" },
+        { title: "Edge of Tomorrow", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Edge+of+Tomorrow", metascore: 71, link: "#" },
+        { title: "District 9", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=District+9", metascore: 81, link: "#" },
+        { title: "Saving Private Ryan", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Saving+Private+Ryan", metascore: 91, link: "#" },
+        { title: "Predator", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Predator", metascore: 45, link: "#" },
+        { title: "Black Hawk Down", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Black+Hawk+Down", metascore: 74, link: "#" },
+        { title: "Dune", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Dune", metascore: 83, link: "#" },
+        { title: "Avatar", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Avatar", metascore: 83, link: "#" },
+        { title: "The Terminator", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Terminator", metascore: 84, link: "#" },
+        { title: "Full Metal Jacket", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Full+Metal+Jacket", metascore: 76, link: "#" },
+        { title: "War of the Worlds", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=War+of+the+Worlds", metascore: 73, link: "#" },
+        { title: "Elysium", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Elysium", metascore: 66, link: "#" },
+        { title: "Iron Man", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Iron+Man", metascore: 79, link: "#" },
+        { title: "The Martian", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Martian", metascore: 80, link: "#" },
+        { title: "Top Gun: Maverick", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Top+Gun", metascore: 78, link: "#" }
+    ],
+    "گرالت": [
+        { title: "The Lord of the Rings: The Fellowship of the Ring", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=LotR", metascore: 92, link: "#" },
+        { title: "The Hobbit: An Unexpected Journey", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Hobbit", metascore: 58, link: "#" },
+        { title: "Game of Thrones (Series)", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=GoT", metascore: 80, link: "#" },
+        { title: "The Witcher (Series)", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Witcher", metascore: 53, link: "#" },
+        { title: "Dungeons & Dragons: Honor Among Thieves", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=DnD", metascore: 72, link: "#" },
+        { title: "Harry Potter and the Sorcerer's Stone", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Harry+Potter", metascore: 64, link: "#" },
+        { title: "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Narnia", metascore: 55, link: "#" },
+        { title: "Excalibur", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Excalibur", metascore: 56, link: "#" },
+        { title: "Pan's Labyrinth", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Pan's+Labyrinth", metascore: 98, link: "#" },
+        { title: "Beowulf", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Beowulf", metascore: 59, link: "#" },
+        { title: "Willow", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Willow", metascore: 47, link: "#" },
+        { title: "Legend", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Legend", metascore: 42, link: "#" },
+        { title: "Labyrinth", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Labyrinth", metascore: 50, link: "#" },
+        { title: "The Last Samurai", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Last+Samurai", metascore: 62, link: "#" },
+        { title: "A Knight's Tale", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=A+Knight's+Tale", metascore: 56, link: "#" },
+        { title: "Gladiator", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Gladiator", metascore: 67, link: "#" }
+    ],
+    "آرتور مورگان": [
+        { title: "The Good, the Bad and the Ugly", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Good,+Bad,+Ugly", metascore: 90, link: "#" },
+        { title: "Unforgiven", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Unforgiven", metascore: 85, link: "#" },
+        { title: "Django Unchained", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Django", metascore: 81, link: "#" },
+        { title: "True Grit", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=True+Grit", metascore: 80, link: "#" },
+        { title: "The Magnificent Seven", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Magnificent+Seven", metascore: 54, link: "#" },
+        { title: "A Fistful of Dollars", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Fistful+of+Dollars", metascore: 65, link: "#" },
+        { title: "For a Few Dollars More", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=For+a+Few+Dollars+More", metascore: 74, link: "#" },
+        { title: "Tombstone", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Tombstone", metascore: 50, link: "#" },
+        { title: "The Wild Bunch", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Wild+Bunch", metascore: 96, link: "#" },
+        { title: "3:10 to Yuma", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=3:10+to+Yuma", metascore: 76, link: "#" },
+        { title: "The Revenant", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Revenant", metascore: 76, link: "#" },
+        { title: "No Country for Old Men", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=No+Country+for+Old+Men", metascore: 92, link: "#" },
+        { title: "The Assassination of Jesse James by the Coward Robert Ford", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Jesse+James", metascore: 80, link: "#" },
+        { title: "Bone Tomahawk", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Bone+Tomahawk", metascore: 76, link: "#" },
+        { title: "Hell or High Water", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Hell+or+High+Water", metascore: 88, link: "#" },
+        { title: "The Hateful Eight", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Hateful+Eight", metascore: 68, link: "#" }
+    ],
+    "زلدا": [
+        { title: "The Lord of the Rings: The Fellowship of the Ring", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=LotR", metascore: 92, link: "#" },
+        { title: "Spirited Away", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Spirited+Away", metascore: 96, link: "#" },
+        { title: "Princess Mononoke", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Mononoke", metascore: 76, link: "#" },
+        { title: "The Princess Bride", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Princess+Bride", metascore: 77, link: "#" },
+        { title: "Stardust", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Stardust", metascore: 66, link: "#" },
+        { title: "Legend", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Legend", metascore: 42, link: "#" },
+        { title: "Willow", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Willow", metascore: 47, link: "#" },
+        { title: "Harry Potter and the Sorcerer's Stone", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Harry+Potter", metascore: 64, link: "#" },
+        { title: "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Narnia", metascore: 55, link: "#" },
+        { title: "Eragon", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Eragon", metascore: 38, link: "#" },
+        { title: "Labyrinth", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Labyrinth", metascore: 50, link: "#" },
+        { title: "Excalibur", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Excalibur", metascore: 56, link: "#" },
+        { title: "The Dark Crystal", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Dark+Crystal", metascore: 66, link: "#" },
+        { title: "Maleficent", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Maleficent", metascore: 56, link: "#" },
+        { title: "Alice in Wonderland", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Alice", metascore: 53, link: "#" },
+        { title: "How to Train Your Dragon", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Dragon", metascore: 75, link: "#" }
+    ],
+    "جوئل": [
+        { title: "The Road", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Road", metascore: 64, link: "#" },
+        { title: "The Last of Us (Series)", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Last+of+Us", metascore: 88, link: "#" },
+        { title: "Children of Men", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Children+of+Men", metascore: 84, link: "#" },
+        { title: "28 Days Later", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=28+Days+Later", metascore: 78, link: "#" },
+        { title: "A Quiet Place", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=A+Quiet+Place", metascore: 82, link: "#" },
+        { title: "Zombieland", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Zombieland", metascore: 73, link: "#" },
+        { title: "The Book of Eli", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Book+of+Eli", metascore: 53, link: "#" },
+        { title: "I Am Legend", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=I+Am+Legend", metascore: 65, link: "#" },
+        { title: "Mad Max: Fury Road", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Mad+Max", metascore: 90, link: "#" },
+        { title: "Dune", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Dune", metascore: 83, link: "#" },
+        { title: "The Postman", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Postman", metascore: 29, link: "#" },
+        { title: "Waterworld", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Waterworld", metascore: 56, link: "#" },
+        { title: "Arrival", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Arrival", metascore: 81, link: "#" },
+        { title: "Snowpiercer", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Snowpiercer", metascore: 84, link: "#" },
+        { title: "Blade Runner 2049", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Blade+Runner", metascore: 81, link: "#" },
+        { title: "The Revenant", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Revenant", metascore: 76, link: "#" }
+    ],
+    "ماریو": [
+        { title: "The Super Mario Bros. Movie", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Super+Mario+Bros", metascore: 46, link: "#" },
+        { title: "Wreck-It Ralph", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Wreck-It+Ralph", metascore: 72, link: "#" },
+        { title: "Sonic the Hedgehog", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Sonic", metascore: 47, link: "#" },
+        { title: "A Bug's Life", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=A+Bug's+Life", metascore: 77, link: "#" },
+        { title: "Toy Story", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Toy+Story", metascore: 95, link: "#" },
+        { title: "Inside Out", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Inside+Out", metascore: 94, link: "#" },
+        { title: "How to Train Your Dragon", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Dragon", metascore: 75, link: "#" },
+        { title: "Shrek", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Shrek", metascore: 84, link: "#" },
+        { title: "Finding Nemo", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Finding+Nemo", metascore: 90, link: "#" },
+        { title: "Coco", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Coco", metascore: 81, link: "#" },
+        { title: "Despicable Me", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Despicable+Me", metascore: 72, link: "#" },
+        { title: "Minions", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Minions", metascore: 56, link: "#" },
+        { title: "Hotel Transylvania", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Hotel+Transylvania", metascore: 47, link: "#" },
+        { title: "The Lego Movie", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Lego+Movie", metascore: 83, link: "#" },
+        { title: "Ratatouille", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Ratatouille", metascore: 96, link: "#" },
+        { title: "Up", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Up", metascore: 88, link: "#" }
+    ],
+    "دختر سایبرپانک": [
+        { title: "Blade Runner", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Blade+Runner", metascore: 89, link: "#" },
+        { title: "The Matrix", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=The+Matrix", metascore: 73, link: "#" },
+        { title: "Ghost in the Shell", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Ghost+in+the+Shell", metascore: 76, link: "#" },
+        { title: "Alita: Battle Angel", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Alita", metascore: 53, link: "#" },
+        { title: "Blade Runner 2049", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Blade+Runner+2049", metascore: 81, link: "#" },
+        { title: "Dredd", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Dredd", metascore: 60, link: "#" },
+        { title: "Minority Report", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Minority+Report", metascore: 80, link: "#" },
+        { title: "Tron: Legacy", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Tron:+Legacy", metascore: 49, link: "#" },
+        { title: "Total Recall (1990)", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Total+Recall", metascore: 57, link: "#" },
+        { title: "Ex Machina", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Ex+Machina", metascore: 78, link: "#" },
+        { title: "Drive", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Drive", metascore: 78, link: "#" },
+        { title: "Ready Player One", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Ready+Player+One", metascore: 64, link: "#" },
+        { title: "Snowpiercer", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Snowpiercer", metascore: 84, link: "#" },
+        { title: "RoboCop (1987)", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=RoboCop", metascore: 67, link: "#" },
+        { title: "A.I. Artificial Intelligence", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=A.I.", metascore: 65, link: "#" },
+        { title: "Inception", image: "https://via.placeholder.com/150/ff3333/1c1c1c?text=Inception", metascore: 74, link: "#" }
     ]
 };
 
@@ -235,9 +434,12 @@ const characterImageContainer = document.getElementById('character-image-contain
 const finalCharacterNameElement = document.getElementById('final-character-name');
 const finalCharacterAnalysis = document.getElementById('final-character-analysis');
 const shareButton = document.getElementById('share-button');
-const statsSection = document.getElementById('character-stats-section'); // Corrected ID
+const retakeQuizButton = document.getElementById('retake-quiz-button');
+const statsSection = document.getElementById('character-stats-section');
 const gameRecommendationSection = document.getElementById('game-recommendations-section');
 const gameListContainer = document.querySelector('.game-list');
+const movieRecommendationSection = document.getElementById('movie-recommendations-section');
+const movieListContainer = document.querySelector('.movie-list');
 
 
 function initializeQuiz() {
@@ -249,13 +451,14 @@ function initializeQuiz() {
     quizContainer.style.display = 'block';
     resultContainer.style.display = 'none';
     shareButton.style.display = 'none';
+    retakeQuizButton.style.display = 'none';
 
-    // Resetting new sections
     const existingTraitsSection = resultContainer.querySelector('.traits-section');
     if (existingTraitsSection) {
         existingTraitsSection.remove();
     }
     gameRecommendationSection.style.display = 'none';
+    movieRecommendationSection.style.display = 'none';
     statsSection.style.display = 'none';
 
     displayQuestion();
@@ -267,7 +470,7 @@ function displayQuestion() {
         const questionData = quizQuestions[currentQuestionIndex];
         quizContainer.innerHTML = `
             <div class="question-card fade-in-scale">
-                <p class="question-text">${currentQuestionIndex + 1}. ${questionData.question}</p>
+                <p class="question-text">${toFarsi(currentQuestionIndex + 1)}. ${questionData.question}</p>
                 <ul class="options-list">
                     ${questionData.options.map((option, index) => `
                         <li>
@@ -282,6 +485,7 @@ function displayQuestion() {
         `;
         resultContainer.style.display = 'none';
         shareButton.style.display = 'none';
+        retakeQuizButton.style.display = 'none';
         
         const existingTraitsSection = resultContainer.querySelector('.traits-section');
         if (existingTraitsSection) {
@@ -344,58 +548,143 @@ function showResult() {
     finalCharacterNameForShare = finalCharacter;
 
     const charInfo = gameCharacters[finalCharacter];
-    characterImageContainer.innerHTML = `<img src="${charInfo.image}" alt="${finalCharacter}" class="fade-in-img">`;
-    finalCharacterNameElement.textContent = `شخصیت گیمینگ شما: ${finalCharacter}`;
-    finalCharacterAnalysis.textContent = `تحلیل: ${charInfo.analysis}`;
-
-    let traitsHtml = '<h3>ویژگی‌های شما:</h3>';
-    traitsHtml += '<div class="traits-section">';
     
-    traitsHtml += '<div class="good-traits">';
-    traitsHtml += '<h4>نقاط قوت 💪</h4>';
-    traitsHtml += '<ul>';
-    charInfo.goodTraits.forEach(trait => {
-        traitsHtml += `<li>${trait}</li>`;
-    });
-    traitsHtml += '</ul>';
-    traitsHtml += '</div>';
-
-    traitsHtml += '<div class="bad-traits">';
-    traitsHtml += '<h4>چالش‌ها 🚧</h4>';
-    traitsHtml += '<ul>';
-    charInfo.badTraits.forEach(trait => {
-        traitsHtml += `<li>${trait}</li>`;
-    });
-    traitsHtml += '</ul>';
-    traitsHtml += '</div>';
-    
-    traitsHtml += '</div>'; 
-
-    finalCharacterAnalysis.insertAdjacentHTML('afterend', traitsHtml);
-
-    // NEW: Display character stats
-    statsSection.style.display = 'block';
-    document.getElementById('power-stat').style.width = charInfo.stats.power + '%';
-    document.getElementById('intelligence-stat').style.width = charInfo.stats.intelligence + '%';
-    document.getElementById('agility-stat').style.width = charInfo.stats.agility + '%';
-    document.getElementById('loyalty-stat').style.width = charInfo.stats.loyalty + '%';
-    document.getElementById('adventure-stat').style.width = charInfo.stats.adventure + '%';
-
-
-    // NEW: Display game recommendations
-    const recommendedGames = gameRecommendations[finalCharacter];
-    gameListContainer.innerHTML = `
-        ${recommendedGames.map(game => `
-            <div class="game-card">
-                <img src="${game.image}" alt="${game.title}">
-                <span>${game.title}</span>
+    const resultHTML = `
+        <div id="character-image-container">
+            <img src="${charInfo.image}" alt="${finalCharacter}" class="fade-in-img">
+        </div>
+        <h2 id="final-character-name">${finalCharacter}</h2>
+        <p id="final-character-analysis">${charInfo.analysis}</p>
+        
+        <div class="traits-section">
+            <div class="good-traits">
+                <h4>نقاط قوت 💪</h4>
+                <ul class="traits-list">
+                    ${charInfo.goodTraits.map(trait => `<li>${trait}</li>`).join('')}
+                </ul>
             </div>
-        `).join('')}
+            <div class="bad-traits">
+                <h4>چالش‌ها 🚧</h4>
+                <ul class="traits-list">
+                    ${charInfo.badTraits.map(trait => `<li>${trait}</li>`).join('')}
+                </ul>
+            </div>
+        </div>
+
+        <div id="character-stats-section">
+            <h3>شخصیت شما در یک نگاه:</h3>
+            <div class="stats-list">
+                <div class="stat-item">
+                    <span>قدرت</span>
+                    <div class="stat-bar"><div class="stat-fill" id="power-stat"><span class="stat-percent"></span></div></div>
+                </div>
+                <div class="stat-item">
+                    <span>هوش</span>
+                    <div class="stat-bar"><div class="stat-fill" id="intelligence-stat"><span class="stat-percent"></span></div></div>
+                </div>
+                <div class="stat-item">
+                    <span>چابکی</span>
+                    <div class="stat-bar"><div class="stat-fill" id="agility-stat"><span class="stat-percent"></span></div></div>
+                </div>
+                <div class="stat-item">
+                    <span>وفاداری</span>
+                    <div class="stat-bar"><div class="stat-fill" id="loyalty-stat"><span class="stat-percent"></span></div></div>
+                </div>
+                <div class="stat-item">
+                    <span>ماجراجویی</span>
+                    <div class="stat-bar"><div class="stat-fill" id="adventure-stat"><span class="stat-percent"></span></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="game-recommendations-section">
+            <h3 class="centered-title">بازی‌های پیشنهادی گیم‌رنتر برای شما:</h3>
+            <div class="game-list">
+                ${gameRecommendations[finalCharacter].map(game => `
+                    <a href="${game.link}" target="_blank" class="game-card">
+                        <img src="${game.image}" alt="${game.title}">
+                        <div class="metacritic-score ${getMetascoreClass(game.metascore)}">
+                            <span class="score-value">${toFarsi(game.metascore)}</span>
+                        </div>
+                        <span class="game-title">${game.title}</span>
+                    </a>
+                `).join('')}
+            </div>
+        </div>
+
+        <div id="movie-recommendations-section">
+            <h3 class="centered-title">فیلم‌های پیشنهادی برای شما:</h3>
+            <div class="movie-list">
+                ${movieRecommendations[finalCharacter].slice(0, 4).map(movie => `
+                    <a href="${movie.link}" target="_blank" class="movie-card">
+                        <img src="${movie.image}" alt="${movie.title}">
+                        <div class="metacritic-score ${getMetascoreClass(movie.metascore)}">
+                            <span class="score-value">${toFarsi(movie.metascore)}</span>
+                        </div>
+                        <span class="movie-title">${movie.title}</span>
+                    </a>
+                `).join('')}
+            </div>
+        </div>
+        
+        <div class="button-group">
+            <button id="retake-quiz-button" class="quiz-button">آزمون دوباره</button>
+            <button id="share-button" class="quiz-button share-button">اشتراک‌گذاری نتیجه</button>
+        </div>
+
+        <div class="social-promo-section">
+            <h3>گیم‌رنتر را در شبکه‌های اجتماعی دنبال کنید:</h3>
+            <div class="social-links">
+                <a href="YOUR_INSTAGRAM_LINK" target="_blank" class="social-link instagram">
+                    <img src="http://googleusercontent.com/image_generation_content/79" alt="اینستاگرام گیم‌رنتر">
+                    <span>صفحه اینستاگرام</span>
+                </a>
+                <a href="YOUR_TELEGRAM_LINK" target="_blank" class="social-link telegram">
+                    <img src="http://googleusercontent.com/image_generation_content/77" alt="تلگرام گیم‌رنتر">
+                    <span>کانال تلگرام</span>
+                </a>
+                <a href="YOUR_TWITTER_LINK" target="_blank" class="social-link twitter">
+                    <img src="http://googleusercontent.com/image_generation_content/78" alt="توییتر گیم‌رنتر">
+                    <span>صفحه توییتر</span>
+                </a>
+                <a href="YOUR_WEBSITE_LINK" target="_blank" class="social-link website">
+                    <img src="aks/website-logo.png" alt="وبسایت گیم‌رنتر">
+                    <span>وبسایت گیم‌رنتر</span>
+                </a>
+            </div>
+        </div>
     `;
-    gameRecommendationSection.style.display = 'flex';
-    
-    resultContainer.classList.add('fade-in-scale');
-    shareButton.style.display = 'block';
+
+    resultContainer.innerHTML = resultHTML;
+    resultContainer.style.display = 'block';
+
+    // Add event listeners after elements are created
+    document.getElementById('retake-quiz-button').addEventListener('click', initializeQuiz);
+    document.getElementById('share-button').addEventListener('click', shareResult);
+
+    animateStats(charInfo.stats);
+}
+
+// Helper function to determine metascore badge color
+function getMetascoreClass(score) {
+    if (score >= 75) {
+        return 'green'; // Green for 75-100
+    } else if (score >= 50) {
+        return 'yellow'; // Yellow for 50-74
+    } else {
+        return 'red'; // Red for 0-49
+    }
+}
+
+function animateStats(stats) {
+    for (const stat in stats) {
+        const statElement = document.getElementById(`${stat}-stat`);
+        if (statElement) {
+            const percentage = stats[stat];
+            statElement.style.width = `${percentage}%`;
+            statElement.querySelector('.stat-percent').textContent = toFarsi(percentage) + '%';
+        }
+    }
 }
 
 function shareResult() {
@@ -408,29 +697,26 @@ function shareResult() {
             title: 'آزمون شخصیت‌شناسی گیم‌رنتر',
             text: shareText,
             url: window.location.href,
-        }).then(() => {
-            console.log('Shared successfully');
-        }).catch((error) => {
-            console.error('Error sharing:', error);
-            copyToClipboard(shareText);
-        });
+        }).catch((error) => console.error('Error sharing:', error));
     } else {
-        copyToClipboard(shareText);
+        const dummy = document.createElement("input");
+        document.body.appendChild(dummy);
+        dummy.setAttribute("value", shareText + " " + window.location.href);
+        dummy.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummy);
+        alert("لینک نتیجه در حافظه کپی شد.");
     }
 }
 
-function copyToClipboard(text) {
-    navigator.clipboard.writeText(text).then(() => {
-        alert("نتیجه آزمون کپی شد! می‌تونید اون رو در شبکه‌های اجتماعی به اشتراک بذارید.");
-    }).catch(err => {
-        console.error('Could not copy text: ', err);
-        alert("مشکلی در کپی کردن نتیجه پیش آمد. لطفاً به صورت دستی کپی کنید.");
-    });
-}
-
-
 nextButton.addEventListener('click', () => {
-    if (selectAnswer()) {
+    const selectedOption = document.querySelector(`input[name="question${currentQuestionIndex}"]:checked`);
+    if (selectedOption) {
+        const optionIndex = selectedOption.value;
+        const traits = quizQuestions[currentQuestionIndex].options[optionIndex].points;
+        for (const char in traits) {
+            userScores[char] += traits[char];
+        }
         currentQuestionIndex++;
         displayQuestion();
     } else {
@@ -439,15 +725,17 @@ nextButton.addEventListener('click', () => {
 });
 
 submitButton.addEventListener('click', () => {
-    if (selectAnswer()) {
+    const selectedOption = document.querySelector(`input[name="question${currentQuestionIndex}"]:checked`);
+    if (selectedOption) {
+        const optionIndex = selectedOption.value;
+        const traits = quizQuestions[currentQuestionIndex].options[optionIndex].points;
+        for (const char in traits) {
+            userScores[char] += traits[char];
+        }
         showResult();
     } else {
         alert("لطفاً یک گزینه را انتخاب کنید!");
     }
 });
 
-shareButton.addEventListener('click', shareResult);
-
 document.addEventListener('DOMContentLoaded', initializeQuiz);
-
-
